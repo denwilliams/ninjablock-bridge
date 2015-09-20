@@ -1,0 +1,1 @@
+var bridge = require('../lib');
