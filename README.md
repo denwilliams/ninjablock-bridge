@@ -3,9 +3,9 @@ Now that Ninja Blocks is no more this project will enable you to utilise the Nin
 
 ## How Does It Work
 
-Pretty simlple actually. The Ninja Cape publishes messages to the Beagleboard over serial.
+Pretty simple actually. The Ninja Cape publishes messages to the Beagleboard over serial.
 
-This module listens for messages over the serial interface and republishes them to registered webhooks and connected socket.io clients.
+This module listens for messages over the serial interface and, parses them, then republishes them to registered webhooks and connected socket.io clients (webhooks coming soon).
 
 ## Example Socket.IO Events
 
@@ -44,7 +44,7 @@ Some example events published over socket.io
 
 The source data coming over the serial interface looks something like:
 
-```
+```json
 {"DEVICE":[{"G":"0","V":0,"D":11,"DA":"010101011111011101011100"}]}
 {"DEVICE":[{"G":"0","V":0,"D":11,"DA":"010101011111011101011100"}]}
 {"DEVICE":[{"G":"0","V":0,"D":11,"DA":"010101011111011101011100"}]}
