@@ -7,7 +7,42 @@ Pretty simlple actually. The Ninja Cape publishes messages to the Beagleboard ov
 
 This module listens for messages over the serial interface and republishes them to registered webhooks and connected socket.io clients.
 
-## Example Messages
+## Example Socket.IO Events
+
+Some example events published over socket.io 
+
+```js
+// Nina eyes and light
+{ event: '0_0_1007.eyes',
+  device: '0_0_1007',
+  type: 'eyes',
+  data: '000000' }
+{ event: '0_0_999.statuslight',
+  device: '0_0_999',
+  type: 'statuslight',
+  data: '0000FF' }
+
+// Temp sensor
+{ event: '0201_0_30.humidity',
+  device: '0201_0_30',
+  type: 'humidity',
+  data: 67 }
+{ event: '0201_0_31.temperature',
+  device: '0201_0_31',
+  type: 'temperature',
+  data: 18.5 }
+
+// RF sensor
+{ event: '0_0_11.rfsensor',
+  device: '0_0_11',
+  deviceName: 'hallway',
+  type: 'rfsensor',
+  data: '010101011111011101011100' }
+```
+
+## Example Source Serial Messages
+
+The source data coming over the serial interface looks something like:
 
 ```
 {"DEVICE":[{"G":"0","V":0,"D":11,"DA":"010101011111011101011100"}]}
