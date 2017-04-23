@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "Now that Ninja Blocks is no more this project will enable you to utilise the Ninja Block to bridge RF433 messages to another system using webhooks and socket.io.",
   "main": "lib/index.js",
-  "preferGlobal": "true",
+  "preferGlobal": true,
   "bin": {
-    "ninjabridge" : "bin/ninjabridge.js"
+    "ninjabridge": "bin/ninjabridge.js"
   },
   "scripts": {
     "test": "mocha"
@@ -22,7 +22,8 @@
   "homepage": "https://github.com/denwilliams/ninjablock-bridge#readme",
   "dependencies": {
     "eventemitter2": "^0.4.14",
-    "serialport": "^1.7.4",
+    "mqtt": "^2.6.2",
+    "serialport": "^4.0.7",
     "socket.io": "^1.3.6"
   },
   "devDependencies": {
