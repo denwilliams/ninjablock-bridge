@@ -9,8 +9,8 @@
   "devices": [
     {
       "name": "hallway",
-      "rf": "010101011111011101011100",
-      "topic": "homenet/sensor/hallway-motion/input/motion"
+      "code": "010101011111011101011100",
+      "topic": "homenet/sensor/hallway-motion/input/trigger"
     }
   ]
 }
