@@ -1,5 +1,5 @@
 # ninjablock-bridge
-Now that Ninja Blocks is no more this project will enable you to utilise the Ninja Block to bridge RF433 messages to another system using webhooks and socket.io.
+Now that Ninja Blocks is no more this project will enable you to utilise the Ninja Block to bridge RF433 messages to another system using Socket.IO, MQTT, and webhooks (TBD).
 
 ## How Does It Work
 
@@ -71,4 +71,34 @@ G - a number corresponding to the port that the device is attached to.
 
 ## Notes
 
+### Node JS
+
 I had to upgrade Node.js on my Ninja Block to 0.12.x. The installed version was 0.8.x.
+
+## Beagleboard Black
+
+I've had a lot more success since I blew away the original operating system install and just started with an image from https://beagleboard.org/latest-images.
+
+To enable WiFi: https://www.digikey.com/en/maker/blogs/how-to-setup-wifi-on-the-beaglebone-black-wireless/f6452fa17bd24347a59f306355ebfef8
+
+I had to `sudo nano /etc/connman/main.conf` then replace
+
+```
+[General]
+PreferredTechnologies=ethernet,wifi
+```
+
+with
+
+```
+[General]
+PreferredTechnologies=wifi,ethernet
+```
+
+And to enable the cape, edited `/boot/uEnv.txt` and added the line:
+
+```
+cape_enable=bone_capemgr.enable_partno=BB-UART1
+```
+
+
