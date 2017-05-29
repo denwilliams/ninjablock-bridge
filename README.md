@@ -101,4 +101,8 @@ And to enable the cape, edited `/boot/uEnv.txt` and added the line:
 cape_enable=bone_capemgr.enable_partno=BB-UART1
 ```
 
+Another suggestion to improve WiFi is to disable HDMI:
 
+```
+cape_disable=bone_capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN
+```
