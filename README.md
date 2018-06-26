@@ -1,4 +1,7 @@
 # ninjablock-bridge
+
+> Deprecated - no longer maintained since I now use a Sonoff RFBridge with custom firmware (Espurna) to achieve essentially the same thing in a more lightweight package. This now serves no purpose.
+
 Now that Ninja Blocks is no more this project will enable you to utilise the Ninja Block to bridge RF433 messages to another system using Socket.IO, MQTT, and webhooks (TBD).
 
 ## How Does It Work
